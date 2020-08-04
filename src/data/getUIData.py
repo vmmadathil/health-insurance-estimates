@@ -2,6 +2,7 @@ import urllib.request
 import datetime
 import re
 import pandas as pd
+
 #starting date
 startDate = datetime.datetime.strptime("03/07/20", "%m/%d/%y")
 
@@ -41,5 +42,6 @@ while (currDate <= endingDate):
     #writing to the table
     table.to_csv(filename)
     
+    #incrementing the date
     currDate = currDate + datetime.timedelta(days=7)
 
